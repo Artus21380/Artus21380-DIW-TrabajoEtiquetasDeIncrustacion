@@ -4,8 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trabajo de Desarrollo de Interfaces Web</title>
+    <style>
+        h1 {color:rgb(136, 123, 7)}
+        h2 {color:chocolate}
+        body {font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin: 0 1rem;}
+        section, figure, figcaption, header, footer {max-width: 800px; margin: auto;}
+        nav a {margin-right: .8rem;}
+        article {background:#f5f5f5; padding:.8rem; border-left:4px solid #c1972d;}
+        a {text-decoration-line: none;}
+    </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a id="pagina-arriba"></a>
+            <h1>Contenido multimedia</h1>
+            <button><a href="index.html">Volver</a></button>
+        </nav>
+    </header>
+    <br>
+    <section>
+        <figure>
+            <h2>Etiqueta img</h2>
+            <img src="https://bnetcmsus-a.akamaihd.net/cms/content_entry_media/RJEADY8V0H351660084693856.png" alt="Paisaje WoW" width="100%"/>
+            <figcaption>Paisaje en una de las Zonas del WoW</figcaption>
+        </figure>
 
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta iframe</h2>
+            <iframe width="560" height="315" src="contenido/Dornogal.mp4" title="Vídeo de World of Warcraft" allowfullscreen></iframe>
+            <figcaption>Teaser de WoW</figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta embed</h2>
+            <embed src="contenido/WowRol.pdf" type="application/pdf" width="600"height="400">
+            <figcaption>Juego de Rol</figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta object</h2>
+            <object data="https://maps.google.com/maps?q=1+Blizzard+Way,+Irvine,+CA+92618&output=embed" type="text/html" width="600" height="400">
+                <p> No se puede mostrar Google Maps.
+                    <a href="https://www.google.com/maps/search/?api=1&query=1+Blizzard+Way%2C+Irvine%2C+CA+92618">Ver las oficinas de Blizzard en Google Maps</a>
+                </p>
+            </object>
+            <figcaption>Oficinas de Blizzard Entertainment</figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta video</h2>
+            <video width="600" controls><source src="contenido/Dornogal.mp4" type="video/mp4">Tu navegador no admite la reproducción de vídeo.</video>
+            <figcaption>Teaser de wow desde el archivo local</figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta audio</h2>
+            <audio controls> <source src="https://nu.vgmtreasurechest.com/soundtracks/world-of-warcraft-3-wrath-of-the-lich-king-complete/didrxqkd/110.%20Arthas%2C%20My%20Son%20%28Cinematic%20Intro%29.mp3" type="audio/mpeg">Tu navegador no admite la reproducción de audio.</audio>
+            <figcaption>Música - Arthas, My Son </figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta source</h2>
+            <video width="600" controls>
+                <source src="contenido/Dornogal.mp4" type="video/mp4">
+                <source src="contenido/Dornogal.webm" type="video/webm">
+                Tu navegador no admite este vídeo.
+            </video>
+            <figcaption> Teaser con otro reproductor de video </figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta canvas</h2>
+            <canvas id="vidaPersonaje" width="300" height="50">Tu navegador no admite canvas</canvas>
+            <figcaption>Barra de vida de un personaje</figcaption>
+        </figure>
+
+        <br><br>
+
+        <figure>
+            <h2>Etiqueta svg</h2>
+            <svg width="160" height="180" viewBox="0 0 160 180">
+                <polygon
+                    points="25,20 135,20 125,95 80,160 35,95"
+                    fill="darkred"
+                    stroke="black"
+                    stroke-width="5">
+                </polygon>
+            </svg>
+            <figcaption>Prueba de hacer un escudo en SVG</figcaption>
+        </figure>
+
+        <br><br>
+
+    </section>
+
+    <footer>
+        <p>&copy; José Francisco Argüez Gómez, 2º DAW - X </p>
+        <a href="https://github.com/Artus21380/DIW-TrabajoEtiquetasDeIncrustacion.git">Repositorio GitHub</a>
+        <button><a href="#pagina-arriba">Ir arriba</a></button>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById("vidaPersonaje");
+        const contexto = canvas.getContext("2d");
+
+        contexto.fillStyle = "black";
+        contexto.fillRect(0, 0, 300, 50);
+
+        contexto.fillStyle = "green";
+        contexto.fillRect(0, 0, 240, 50);
+    </script>
 </body>
 </html>
